@@ -90,3 +90,14 @@ O agente identifica SQL Injection, cita T1190 do MITRE ATT&CK, explica a explora
 O agente confirma a mitigação no formato fixo, com severidade baixa e próximo passo (hash de senha).
 
 ![Confirmação da mitigação](prints/print-3-mitigacao.png)
+
+## Evolução em Rust
+
+A especialização foi evoluída para Rust, com 6 skills e CI/CD completo:
+- Auditoria de dependências (`cargo audit`).
+- SAST (`semgrep`).
+- Políticas (`cargo deny`).
+- Correção assistida (`rust-autofix`) com aprovação humana.
+- Workflow GitHub Actions que bloqueia merge se a segurança falhar.
+
+Repositório: https://github.com/wil-ckaew/dio-agent-security-rust
