@@ -68,3 +68,25 @@ text
 - MITRE ATT&CK T1190: https://attack.mitre.org/techniques/T1190/
 - OWASP Top 10 2021 A03 (Injection): https://owasp.org/Top10/A03_2021-Injection/
 - CWE-89 (SQL Injection): https://cwe.mitre.org/data/definitions/89.html
+
+## Prints da análise conduzida pelo Hermes
+
+### 1. Contexto antes de comando
+
+O agente pergunta o ambiente, a autorização, os serviços expostos e a criticidade antes de listar qualquer comando.
+
+![Contexto antes de comando](prints/print-1-contexto.png)
+
+### 2. Análise de SQL Injection
+
+O agente identifica SQL Injection, cita T1190 do MITRE ATT&CK, explica a exploração e recomenda consulta parametrizada.
+
+![Análise de SQL Injection](prints/print-2-analise.png)
+
+![Análise de SQL Injection (continuação)](prints/print-2-analise2.png)
+
+### 3. Confirmação da mitigação
+
+O agente confirma a mitigação no formato fixo, com severidade baixa e próximo passo (hash de senha).
+
+![Confirmação da mitigação](prints/print-3-mitigacao.png)
